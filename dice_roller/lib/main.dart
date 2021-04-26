@@ -35,7 +35,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: Text('Dice Roller App'),
       ),
       body: Center(
@@ -49,10 +51,14 @@ class _HomePageState extends State<HomePage> {
                 height: 100,
                 width: 100,
               ),
-              Text(
-                "$_diceIndex",
-                style: TextStyle(
-                  fontSize: 25,
+              Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: Text(
+                  "$_diceIndex",
+                  style: TextStyle(
+                    fontSize: 25,
+                    color: Colors.white
+                  ),
                 ),
               )
             ],
