@@ -7,11 +7,9 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
   }
@@ -35,33 +33,16 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
       appBar: AppBar(
-        backgroundColor: Colors.black,
         title: Text('Dice Roller App'),
       ),
       body: Center(
         child: GestureDetector(
           onTap: _roll,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                'images/dice$_diceIndex.png',
-                height: 100,
-                width: 100,
-              ),
-              Padding(
-                padding: const EdgeInsets.all(18.0),
-                child: Text(
-                  "$_diceIndex",
-                  style: TextStyle(
-                    fontSize: 25,
-                    color: Colors.white
-                  ),
-                ),
-              )
-            ],
+          child: Image.asset(
+            'assets/dice$_diceIndex.png',
+            height: 100,
+            width: 100,
           ),
         ),
       ),
