@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
         child: GestureDetector(
           onTap: _roll,
           child: Image.asset(
-            'assets/dice$_diceIndex.png',
+            'images/dice$_diceIndex.png',
             height: 100,
             width: 100,
           ),
