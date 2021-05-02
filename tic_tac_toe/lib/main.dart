@@ -8,6 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
   }
@@ -129,6 +130,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Tic Tac Toe App'),
+        backgroundColor: Colors.black,
       ),
       body: Column(
         children: [
@@ -171,10 +173,12 @@ class _HomePageState extends State<HomePage> {
             padding: EdgeInsets.symmetric(vertical: 10),
             child: Text(winnerText),
           ),
-          ElevatedButton(
-            onPressed: _resetGame,
-            child: Text("Reset Game"),
-          ),
+          // ignore: deprecated_member_use
+          RaisedButton(
+              onPressed: _resetGame,
+              child: Text("Reset Game",style: TextStyle(color: Colors.white,fontSize: 20),),
+              color: Colors.black,
+          )
         ],
       ),
     );
